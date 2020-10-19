@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+if [ $1 = "light" ]; then 
+	./bin/light
+elif [ $1 = "temp" ]; then 
+	./bin/temp
+elif [ $1 = "window" ]; then 
+	./bin/window
+elif [ $1 = "plant" ]; then 
+	./bin/plant
+elif [ -z $1 ]; then
+	echo "Naglasi fajl"
+else
+	echo "Ne postoji fajl sa tim imenom."
+fi	
+
+
+	

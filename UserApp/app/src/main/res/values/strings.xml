@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HomeAutomationUserApp</string>
+    <string name="buttonLight">Light</string>
+    <string name="buttonTemp">TEMPERATURE</string>
+    <string name="buttonWindow">Window</string>
+    <string name="buttonPlant">Plant</string>
+</resources>

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+	gcc  	-o 	./bin/light   	./src/lssdp/lssdp.c 	./src/light_sim.c   	-lmosquitto	&&
+	gcc  	-o 	./bin/temp    	./src/lssdp/lssdp.c 	./src/temp_sim.c    	-lmosquitto	&&
+	gcc  	-o 	./bin/window  	./src/lssdp/lssdp.c 	./src/window_sim.c  	-lmosquitto	&&
+	gcc  	-o 	./bin/plant   	./src/lssdp/lssdp.c 	./src/plant_sim.c   	-lmosquitto
+elif [ $1 = "light" ]; then 
+	gcc  	-o 	./bin/light   	./src/lssdp/lssdp.c 	./src/light_sim.c   	-lmosquitto
+elif [ $1 = "temp" ]; then 
+	gcc  	-o 	./bin/temp   	./src/lssdp/lssdp.c 	./src/temp_sim.c   		-lmosquitto
+elif [ $1 = "window" ]; then 
+	gcc  	-o 	./bin/window   	./src/lssdp/lssdp.c 	./src/window_sim.c   	-lmosquitto
+elif [ $1 = "plant" ]; then 
+	gcc  	-o 	./bin/plant   	./src/lssdp/lssdp.c 	./src/plant_sim.c   	-lmosquitto
+else
+	echo "nije prepoznata komanda."
+fi	
+
+
+gcc -o ./bin/msearch ./src/lssdp/lssdp.c ./src/msearch.c
+
+	
